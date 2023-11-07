@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function remHandler($size) {
+	@return math.div($size, 16)+rem;
+}
+
+@function vwHandler($x) {
+	@return math.div($x, 19.2)+vw;
+}

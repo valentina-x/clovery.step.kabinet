@@ -1,0 +1,52 @@
+// COLORS 
+$white: #fff;
+
+// text
+$primary: #171719;
+$secondary: #84858B;
+
+// status
+$status-red: #EF2424;
+$status-green: #31BE00;
+$status-gray: #D2D2D2;
+$status-hover: #F2F2FF;
+$status-active: #E1E1FF;
+
+// category color
+$cat-uiux:#29A600;
+$cat-graph:#E45F2B;
+$cat-design:#F0D031;
+
+// background
+$bg-1place:#E8E8FF;
+$bg-2-4place:#DDF5D5;
+$bg-platform:#F4F5FF;
+$bg-message: #F3F5FD;
+
+// brand color
+$brand-color1: #3E42C2;
+$brand-color2: #2E3192;
+
+// effects
+@mixin widget() {
+	box-shadow: 0 -1px vwHandler(4) rgba(219, 224, 244, 0.37), 0 vwHandler(3) vwHandler(4) rgba(219, 224, 244, 0.37);
+	border-radius: vwHandler(20);
+}
+
+@mixin widget-highlight() {
+	box-shadow: 1px 1px vwHandler(28) vwHandler(2) rgba(178, 181, 252, 0.8), -1px -1px vwHandler(28) vwHandler(2) rgba(178, 181, 252, 0.8);
+	border-radius: vwHandler(20);
+}
+
+@mixin menu() {
+	box-shadow: vwHandler(6) vwHandler(6) vwHandler(50) rgba(188, 192, 216, 0.35);
+	border-radius: vwHandler(10);
+}
+
+
+
+// FONTS
+$regular: "VelaSans-Regular";
+$medium: "VelaSans-Medium";
+$bold: "VelaSans-Bold";
+$semibold: "VelaSans-SemiBold";
