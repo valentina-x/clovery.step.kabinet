@@ -6,6 +6,7 @@ const Sidebar: React.FC = () => {
   return (
     <>
       <aside className={`${SidebarStyles.sidebar} `}>SIDEBAR</aside>
+      <h1>Hello1</h1>
     </>
   );
 };
