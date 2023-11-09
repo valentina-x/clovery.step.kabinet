@@ -10,6 +10,7 @@ const IndexPage: React.FC = () => {
       </Head>
       <>
         <h1>Главная страница</h1>
+        <a href='/tasks'>Все задания</a>
       </>
     </Layout>
   );

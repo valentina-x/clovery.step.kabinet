@@ -7,3 +7,24 @@
 @function vwHandler($x) {
 	@return math.div($x, 19.2)+vw;
 }
+
+@mixin container() {
+	padding: vwHandler(28);
+	background: $white;
+	box-shadow: 0 vwHandler(-1) vwHandler(4) rgba(219, 224, 244, 0.37), 0 vwHandler(3) vwHandler(4) rgba(219, 224, 244, 0.37);
+	border-radius: vwHandler(16);
+
+	&_mode {
+		padding: vwHandler(20);
+	}
+}
+
+@mixin border12() {
+	border-radius: vwHandler(12);
+}
+
+@mixin title($fz) {
+	font-size: vwHandler($fz);
+	font-family: $regular-coolvetica;
+	font-weight: normal;
+}

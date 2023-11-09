@@ -1,0 +1,140 @@
+@import "../../assets/scss/default-import";
+
+/* TASK INFO STYLES */
+
+.taskinfo {
+	width: 100%;
+	@include container;
+
+	&__header {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: vwHandler(10);
+	}
+
+	&__category {
+		width: vwHandler(120);
+		height: vwHandler(28);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: vwHandler(14);
+		line-height: 1;
+		@include border12;
+
+		&_graph {
+			background-color: $cat-graph;
+			color: $white;
+		}
+
+		&_uxui {
+			background-color: $cat-uiux;
+			color: $white;
+		}
+
+		&_web {
+			background-color: $cat-design;
+			color: $primary;
+		}
+	}
+
+	&__dates {
+		text-align: right;
+
+		&>span {
+			font-size: vwHandler(14);
+			color: $secondary;
+		}
+
+		&_elements {
+			& span {
+				color: $brand-color1;
+				font-family: $semibold;
+			}
+		}
+	}
+
+	&__title {
+		@include title(28);
+		margin: 0;
+	}
+
+	&__text {
+		line-height: 160%;
+		margin-top: vwHandler(20);
+		margin-bottom: vwHandler(20);
+
+		& a {
+			display: block;
+		}
+		& b, & strong {
+			font-weight: normal;
+			font-family: $semibold;
+		}
+	}
+
+	&__files {
+		width: 100%;
+
+		&_title {
+			display: flex;
+			align-items: center;
+			margin-bottom: vwHandler(14);
+
+			& svg {
+				width: vwHandler(28);
+				height: vwHandler(28);
+				margin-right: vwHandler(20);
+			}
+
+			& span {
+				font-family: $semibold;
+			}
+		}
+
+		&_item {
+			display: flex;
+			align-items: center;
+			margin-bottom: vwHandler(12);
+			text-decoration: none;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			& svg {
+				width: vwHandler(40);
+				height: vwHandler(40);
+				margin-right: vwHandler(28);
+			}
+
+			&>div {
+				& span {
+					display: block;
+					color: $primary;
+
+					&:nth-child(1) {
+						font-family: $semibold;
+						transition: color 0.4s;
+					}
+
+					&:nth-child(2) {
+						color: $secondary;
+					}
+				}
+			}
+
+			&:hover {
+				&>div {
+					& span {
+						&:nth-child(1) {
+							color: $hover;
+						}
+					}
+				}
+			}
+		}
+	}
+}

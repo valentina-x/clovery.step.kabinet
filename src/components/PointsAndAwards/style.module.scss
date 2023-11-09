@@ -1,0 +1,21 @@
+@import "../../assets/scss/default-import";
+
+/* POINTS AND AWARDS STYLES */
+
+.pointsandawards {
+	width: vwHandler(888);
+	height: vwHandler(200);
+	@include container;
+	margin-left: auto;
+	margin-right: 0;
+	margin-top: vwHandler(30);
+
+	&__title {
+		@include title(20);
+		margin: 0;
+	}
+
+	&__text {
+		margin: vwHandler(20) 0 vwHandler(28);
+	}
+}

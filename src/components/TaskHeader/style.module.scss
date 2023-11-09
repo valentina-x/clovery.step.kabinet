@@ -1,0 +1,75 @@
+@import "../../assets/scss/default-import";
+
+/* TASK HEADER STYLES */
+
+.header {
+	width: 100%;
+	height: vwHandler(110);
+	padding-left: vwHandler(40);
+	padding-top: vwHandler(22);
+
+	&_shadow {
+		box-shadow: 0 vwHandler(4) vwHandler(4) #EFF1FF;
+	}
+}
+
+.close {
+	display: flex;
+	align-items: center;
+	font-size: vwHandler(16);
+	font-family: $medium;
+	color: $secondary;
+	transition: all 0.6s;
+
+	& svg {
+		width: vwHandler(24);
+		margin-right: vwHandler(16);
+
+		& path {
+			transition: all 0.6s;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+		color: $brand-color1;
+
+		& svg {
+			& path {
+				stroke: $brand-color1;
+			}
+		}
+	}
+}
+
+.nav {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-top: vwHandler(17);
+
+	&__link {
+		width: auto;
+		height: vwHandler(48);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 vwHandler(10);
+		font-size: vwHandler(16);
+		line-height: 140%;
+		font-family: $semibold;
+		color: $secondary;
+		text-decoration: none;
+		border-bottom: vwHandler(2) solid transparent;
+		transition: all 0.6s;
+
+		&.activated {
+			border-color: $brand-color1;
+		}
+
+		&:hover {
+			border-color: $brand-color1;
+		}
+	}
+}

@@ -1,7 +1,7 @@
 @import "../default-import";
 
+/* TASK DETAIL STYLES */
+
 .bg {
-	background-color: #ddd;
-	color: #333;
-	padding: vwHandler(30);
+	@include container();
 }
