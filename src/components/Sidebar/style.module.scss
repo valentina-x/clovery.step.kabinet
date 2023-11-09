@@ -3,5 +3,58 @@
 /* SIDEBAR STYLES */
 
 .sidebar {
-	width: vwHandler(260);
+  width: vwHandler(260);
+  height: 100vh;
+  background-color: $white;
+  position: relative;
+
+  &__logo {
+    padding: vwHandler(62) vwHandler(72) & svg {
+      width: vwHandler(139);
+      height: vwHandler(82);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: vwHandler(22);
+    right: vwHandler(22);
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: vwHandler(12);
+
+    &_item {
+      display: flex;
+      align-items: center;
+      margin-bottom: vwHandler(20);
+
+      & svg {
+        width: vwHandler(40);
+        height: vwHandler(40);
+      }
+
+      &_text {
+        padding: vwHandler(0) vwHandler(12);
+        color: $secondary;
+        font-size: vwHandler(16);
+      }
+
+      &_user {
+        display: flex;
+        flex-direction: column;
+        color: $secondary;
+        padding: vwHandler(0) vwHandler(12);
+      }
+
+      &_cat {
+        padding: vwHandler(0) vwHandler(12);
+        font-size: vwHandler(14);
+        color: $secondary;
+      }
+    }
+  }
 }
