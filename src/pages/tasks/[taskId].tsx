@@ -1,28 +1,29 @@
 import axios from 'axios';
 import React from 'react';
 import { GetServerSidePropsContext } from 'next';
-import styles from '../../assets/scss/pages/taskDetail.module.scss';
+import platformStyles from '../../assets/scss/pages/_app.module.scss';
+import TaskInfo from '../../components/TaskInfo';
+import SendCompletedWork from '../../components/SendCompletedWork';
+import PointsAndAwards from '../../components/PointsAndAwards';
+import TaskHeader from '../../components/TaskHeader';
 
 interface TaskDetailProps {
   task: {
     title: string;
     description: string;
-    // Добавьте другие поля задания здесь
   };
 }
 
 const TaskDetail: React.FC<TaskDetailProps> = ({ task }) => {
   return (
-    <>
-      <nav>
-        <a href='#task_description'>Описание задания</a>
-      </nav>
-      <div className={`${styles.bg}`}>
-        <h1>{task.title}</h1>
-        {/* <p>{task.description}</p> */}
-        {/* Вывод файлов */}
+    <div className={`${platformStyles.platform__outer}`}>
+      <TaskHeader />
+      <div className={`${platformStyles.platform__wrapper}`}>
+        <TaskInfo />
+        <SendCompletedWork />
+        <PointsAndAwards />
       </div>
-    </>
+    </div>
   );
 };
 

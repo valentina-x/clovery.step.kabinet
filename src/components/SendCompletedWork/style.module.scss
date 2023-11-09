@@ -1,0 +1,19 @@
+@import "../../assets/scss/default-import";
+
+/* TASK INFO STYLES */
+
+.sendcomplitedwork {
+	width: vwHandler(624);
+	height: vwHandler(200);
+	@include container;
+	margin-top: vwHandler(30);
+
+	&__title {
+		@include title(20);
+		margin: 0;
+	}
+
+	&__text {
+		margin: vwHandler(20) 0 vwHandler(28);
+	}
+}

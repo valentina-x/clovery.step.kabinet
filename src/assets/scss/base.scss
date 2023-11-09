@@ -13,11 +13,16 @@ body {
 
 body {
 	font-family: $regular, Arial, Helvetica, sans-serif;
-	background-color: $bg-platform;
+	font-size: vwHandler(16);
+	font-weight: normal;
 }
 
 a {
 	color: $brand-color1;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 label {

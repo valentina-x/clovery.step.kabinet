@@ -1,0 +1,26 @@
+@import "../default-import";
+
+/* PLATFORM STYLES */
+
+.platform {
+	width: 100%;
+	min-height: 100vh;
+	background-color: $bg-platform;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	&__outer {
+		width: vwHandler(1660);
+		position: relative;
+		flex: 1;
+	}
+
+	&__wrapper {
+		width: vwHandler(1548);
+		margin: vwHandler(20) auto vwHandler(90);
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+}
