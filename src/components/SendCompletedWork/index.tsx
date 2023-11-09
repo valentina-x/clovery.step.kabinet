@@ -6,6 +6,7 @@ const SendCompletedWork: React.FC = () => {
   return (
     <div
       className={`${SendCompletedWorkStyles.sendcomplitedwork} ${SendCompletedWorkStyles.sendcomplitedwork_mode}`}
+      id='completed_work'
     >
       <div className={`${SendCompletedWorkStyles.sendcomplitedwork__title}`}>Отправка решения</div>
       <div className={`${SendCompletedWorkStyles.sendcomplitedwork__text}`}>

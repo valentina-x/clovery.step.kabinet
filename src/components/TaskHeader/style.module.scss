@@ -5,8 +5,13 @@
 .header {
 	width: 100%;
 	height: vwHandler(110);
-	padding-left: vwHandler(40);
 	padding-top: vwHandler(22);
+
+	&__wrapper {
+		width: vwHandler(1548);
+		padding-left: vwHandler(6);
+		margin: 0 auto;
+	}
 
 	&_shadow {
 		box-shadow: 0 vwHandler(4) vwHandler(4) #EFF1FF;
@@ -20,9 +25,12 @@
 	font-family: $medium;
 	color: $secondary;
 	transition: all 0.6s;
+	opacity: 0;
+	pointer-events: none;
 
 	& svg {
 		width: vwHandler(24);
+		height: vwHandler(24);
 		margin-right: vwHandler(16);
 
 		& path {
@@ -72,4 +80,8 @@
 			border-color: $brand-color1;
 		}
 	}
+}
+
+.highlight {
+	@include widget-highlight();
 }
