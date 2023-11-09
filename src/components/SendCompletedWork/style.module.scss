@@ -5,8 +5,9 @@
 .sendcomplitedwork {
 	width: vwHandler(624);
 	height: vwHandler(200);
-	@include container;
 	margin-top: vwHandler(30);
+	@include container;
+	transition: all 0.6s;
 
 	&__title {
 		@include title(20);

@@ -1,12 +1,9 @@
 /* eslint-disable no-undef */
 const path = require('path');
-const nextConfig = require('./next.config.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const PugLintPlugin = require('puglint-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -18,7 +15,7 @@ const options = {
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, './src/Pages/index.tsx'),
+    main: path.resolve(__dirname, './src/pages/index.tsx'),
   },
 
   output: {
@@ -70,8 +67,9 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.svg$/,
-        use: 'svg-sprite-loader',
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
@@ -80,18 +78,10 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.pug',
-      filename: 'index.html',
-    }),
     new ESLintPlugin({
       fix: true,
     }),
     new PugLintPlugin(options),
-    new CopyWebpackPlugin({
-      patterns: [{ from: './src/Assets/images', to: 'images' }],
-    }),
-
     // new BundleAnalyzerPlugin(),
   ],
   optimization: {

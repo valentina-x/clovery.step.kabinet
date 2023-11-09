@@ -5,6 +5,7 @@ const PointsAndAwards: React.FC = () => {
   return (
     <div
       className={`${PointsAndAwardsStyles.pointsandawards} ${PointsAndAwardsStyles.pointsandawards_mode}`}
+      id='points_awards'
     >
       <div className={`${PointsAndAwardsStyles.pointsandawards__title}`}>Отправка решения</div>
       <div className={`${PointsAndAwardsStyles.pointsandawards__text}`}>

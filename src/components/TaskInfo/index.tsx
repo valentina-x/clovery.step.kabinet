@@ -1,11 +1,11 @@
 import React from 'react';
 import TaskInfoStyles from './style.module.scss';
-import PaperClipSVG from '../../../public/images/svg/s_paperclip.svg';
-import FileSVG from '../../../public/images/svg/s_file.svg';
+import PaperClipSVG from '/public/images/svg/s_paperclip.svg';
+import FileSVG from '/public/images/svg/s_file.svg';
 
 const TaskInfo: React.FC = () => {
   return (
-    <div className={`${TaskInfoStyles.taskinfo}`}>
+    <div className={`${TaskInfoStyles.taskinfo}`} id='task_description'>
       <div className={`${TaskInfoStyles.taskinfo__header}`}>
         <div
           className={`${TaskInfoStyles.taskinfo__category} ${TaskInfoStyles.taskinfo__category_graph}`}
@@ -47,14 +47,14 @@ const TaskInfo: React.FC = () => {
           <PaperClipSVG />
           <span>Вложения</span>
         </div>
-        <a className={`${TaskInfoStyles.taskinfo__files_item}`} href='javascript:;'>
+        <a className={`${TaskInfoStyles.taskinfo__files_item}`} href='#'>
           <FileSVG />
           <div>
             <span>Цвета кловери.pdf</span>
             <span>500.07 KB</span>
           </div>
         </a>
-        <a className={`${TaskInfoStyles.taskinfo__files_item}`} href='javascript:;'>
+        <a className={`${TaskInfoStyles.taskinfo__files_item}`} href='#'>
           <FileSVG />
           <div>
             <span>Пожелания заказчика.png</span>
