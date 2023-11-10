@@ -11,10 +11,15 @@
   height: 100vh;
   background-color: $white;
   position: relative;
-  padding: 0 0 vwHandler(20) vwHandler(12);
+  padding: 0 0 vwHandler(20) 0;
+
+  &_open {
+    width: vwHandler(68);
+    overflow: hidden;
+  }
 
   &__logo {
-    padding: vwHandler(62) vwHandler(72);
+    margin: vwHandler(72) auto;
 
     & svg {
       width: vwHandler(139);
@@ -26,6 +31,21 @@
     position: absolute;
     top: vwHandler(22);
     right: vwHandler(22);
+
+    & svg {
+      width: vwHandler(24);
+      height: vwHandler(24);
+    }
+  }
+
+  &__upper_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__lower_part {
+    padding: vwHandler(12);
   }
 
   &__menu {
